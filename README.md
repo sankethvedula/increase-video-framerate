@@ -22,28 +22,29 @@ Torch must be installed in the setup. Along with CUDA support.
 (Any other dependencies will be added)  
 
 # Run:
-1. Create empty directories inside the cloned folder. 
+Create empty directories inside the cloned folder. 
 ```
 $> mkdir frames
 $> mkdir frame_data
 ```
-2. Grab the frames live from the web cam. (It automatically searches for the camera device at /dev/vid0) 
+Grab the frames live from the web cam. (It automatically searches for the camera device at /dev/vid0) 
 
 ```
 $> qlua frame-grabber.lua
 ```
-3. Copy all the frames which are in the existing folder and put them in ./frames 
+Copy all the frames which are in the existing folder and put them in ./frames 
 ```
 $> mv *.jpg ./frames
 ```
-4. Process the frames and save 4 x 4 patches for each frame with 2 step size. 
+Process the frames and save 4 x 4 patches for each frame with 2 step size. 
 The frames are processed and the 4 x 4 vectors of each frame are stored in ".t7" format which can be easily imported during the training step.
 ```
 $> th image_patch.lua
 ```
-5. The above step will generate the patches of images in the ./frame_data folder 
+The above step will generate the patches of images in the ./frame_data folder 
 
-6. Take a set of three frames into the memory - 1,2,3
+Take a set of three frames into the memory - 1,2,3
+
 The 4 x 4 patch of 1st, 3rd frames are taken as input and the 2 x 2 center patch in the 2nd frame is the output. 
 and it is passed through the following model:
 
