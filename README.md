@@ -43,7 +43,7 @@ $> th image_patch.lua
 ```
 The above step will generate the patches of images in the ./frame_data folder 
 
-Take a set of three frames into the memory - 1,2,3
+Take a set of three frames into the memory - Let's say the frame numbers 1,2,3
 
 The 4 x 4 patch of 1st, 3rd frames are taken as input and the 2 x 2 center patch in the 2nd frame is the output. 
 and it is passed through the following model:
