@@ -21,7 +21,21 @@ Torch must be installed in the setup. Along with CUDA support.
 7. qlua
 (Any other dependencies will be added)  
 
-# Run:
+
+#Progress till now.
+
+* Frame grabber -- done -- which will grab the frames from the live feed from the camera device.
+* Dividing the image into patches - done - takes each frame and divides it into fixed size patch with a particular step size and saves the tensor of all the patches for a given frame
+* Defined the model which is mentioned below, as well as the loss function
+
+# To do
+
+* Pass the frames through the given model minimizing the loss. 
+* Do the same for many videos
+* Test the outputs
+
+
+# How to run the code:
 Create empty directories inside the cloned folder. 
 ```
 $> mkdir frames
